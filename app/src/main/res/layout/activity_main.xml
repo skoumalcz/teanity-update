@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        style="@style/Widget.MaterialComponents.AppBarLayout.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            app:title="My screen" />
+
+        <com.skoumal.teanity.update.ui.UpdateProgressView
+            android:id="@+id/progress_view_custom_toolbar"
+            style="@style/Widget.PlayCore.Update.Progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#10000000"
+            android:padding="16dp"
+            android:theme="@style/ThemeOverlay.PlayCore.Update.OnPrimary" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:animateLayoutChanges="true"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.skoumal.teanity.update.ui.UpdateProgressTooltipLayout
+            android:id="@+id/progress_container"
+            style="@style/Widget.PlayCore.Update.Progress.Tooltip"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone">
+
+            <com.skoumal.teanity.update.ui.UpdateProgressView
+                android:id="@+id/progress_view"
+                style="@style/Widget.PlayCore.Update.Progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.PlayCore.Update.OnSurface" />
+
+        </com.skoumal.teanity.update.ui.UpdateProgressTooltipLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/progress_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="New update available!"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textStyle="bold"
+            app:icon="@drawable/ic_update"
+            app:iconPadding="8dp"
+            app:iconSize="18dp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="32dp"
+        android:elevation="8dp"
+        app:cardBackgroundColor="?colorSecondary"
+        app:cardCornerRadius="16dp">
+
+        <com.skoumal.teanity.update.ui.UpdateProgressView
+            android:id="@+id/progress_view_custom"
+            style="@style/Widget.PlayCore.Update.Progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:theme="@style/ThemeOverlay.PlayCore.Update.OnSecondary" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</FrameLayout>

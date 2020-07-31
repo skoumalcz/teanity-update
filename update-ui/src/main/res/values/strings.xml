@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="play_core_ui_available_title">New update is available</string>
+    <string name="play_core_ui_available_message">It will begin downloading shortly</string>
+
+    <string name="play_core_ui_downloading_title">Downloading update</string>
+    <string name="play_core_ui_downloading_message">%.1f of %.1f MB</string>
+
+    <string name="play_core_ui_downloaded_title">Update is ready</string>
+    <string name="play_core_ui_downloaded_message">Click here to install</string>
+
+</resources>

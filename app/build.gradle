@@ -1,0 +1,30 @@
+plugins {
+    id 'com.android.application'
+    id 'teanity'
+}
+
+android {
+    defaultConfig {
+        applicationId "com.skoumal.teanity.update.app"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+    implementation project(":update-ui")
+
+    implementation droid.core
+    implementation droid.appcompat
+
+    implementation google.material
+    implementation google.playCore
+    implementation google.playKtx
+
+}

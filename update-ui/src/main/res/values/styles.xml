@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Styles -->
+
+    <style name="Widget.PlayCore.Update.Progress.Tooltip" parent="">
+        <item name="arrowHeight">10dp</item>
+        <item name="arrowWidth">20dp</item>
+        <item name="cornerSizeBottomLeft">16dp</item>
+        <item name="cornerSizeBottomRight">16dp</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeTopRight">16dp</item>
+
+        <item name="android:clipToPadding">false</item>
+
+        <item name="android:elevation">4dp</item>
+
+        <item name="android:background">?colorSurface</item>
+    </style>
+
+    <style name="Widget.PlayCore.Update.Progress" parent="">
+        <item name="android:padding">8dp</item>
+        <item name="android:background">@drawable/bg_update_lib_selectable_background</item>
+    </style>
+
+    <!-- Themes -->
+
+    <style name="ThemeOverlay.PlayCore.Update.OnSurface" parent="">
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="colorControlNormal">?colorOnSurface</item>
+    </style>
+
+    <style name="ThemeOverlay.PlayCore.Update.OnPrimary" parent="">
+        <item name="android:textColor">?colorOnPrimary</item>
+        <item name="colorControlNormal">?colorOnPrimary</item>
+        <item name="colorSecondary">?colorOnPrimary</item>
+    </style>
+
+    <style name="ThemeOverlay.PlayCore.Update.OnSecondary" parent="">
+        <item name="android:textColor">?colorOnSecondary</item>
+        <item name="colorControlNormal">?colorOnSecondary</item>
+        <item name="colorSecondary">?colorOnSecondary</item>
+    </style>
+
+</resources>

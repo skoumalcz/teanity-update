@@ -1,0 +1,17 @@
+plugins {
+    id 'com.android.library'
+    id 'teanity'
+}
+
+dependencies {
+
+    implementation droid.core
+    implementation droid.appcompat
+    implementation droid.constraint
+
+    implementation google.material
+
+    compileOnly google.playCore
+    compileOnly google.playKtx
+
+}

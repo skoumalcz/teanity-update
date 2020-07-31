@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/play_core_update_progress_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:minHeight="48dp"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/play_core_update_progress_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+        app:layout_constraintBottom_toTopOf="@+id/play_core_update_progress_message"
+        app:layout_constraintEnd_toStartOf="@+id/play_core_update_progress_action"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Downloading update" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/play_core_update_progress_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+        app:layout_constraintBottom_toTopOf="@+id/play_core_update_progress_bar"
+        app:layout_constraintEnd_toEndOf="@+id/play_core_update_progress_title"
+        app:layout_constraintStart_toStartOf="@+id/play_core_update_progress_title"
+        app:layout_constraintTop_toBottomOf="@+id/play_core_update_progress_title"
+        tools:text="2.9 of 8.3 MB" />
+
+    <ProgressBar
+        android:id="@+id/play_core_update_progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:progressTint="?colorSecondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/play_core_update_progress_title"
+        app:layout_constraintStart_toStartOf="@+id/play_core_update_progress_title"
+        app:layout_constraintTop_toBottomOf="@+id/play_core_update_progress_message"
+        tools:progress="35" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/play_core_update_progress_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="0dp"
+        android:paddingBottom="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_update_lib_arrow_right"
+        app:tint="?colorControlNormal" />
+
+    <ProgressBar
+        android:id="@+id/play_core_update_progress_loading"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:progressTint="?colorSecondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

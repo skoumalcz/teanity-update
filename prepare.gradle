@@ -1,0 +1,41 @@
+subprojects {
+    def kotlinStd = kotlin.std
+    afterEvaluate {
+        if (!(plugins.hasPlugin("com.android.library") || plugins.hasPlugin("com.android.application"))) return
+
+        android {
+            compileSdkVersion(setup.compileSdk)
+
+            defaultConfig {
+                minSdkVersion(setup.minSdk)
+                targetSdkVersion(setup.targetSdk)
+                versionCode = 1
+                versionName = "1.0"
+            }
+
+            buildTypes {
+                release {
+                    minifyEnabled false
+                    shrinkResources false
+                    proguardFiles getDefaultProguardFile('proguard-android.txt'), project.rootDir.absolutePath + '/proguard-rules.pro'
+                }
+            }
+
+            testOptions {
+                animationsDisabled = true
+                unitTests {
+                    includeAndroidResources = true
+                    returnDefaultValues = true
+                }
+            }
+
+            packagingOptions {
+                //exclude "META-INF/*"
+            }
+        }
+
+        dependencies {
+            implementation kotlinStd
+        }
+    }
+}

@@ -1,0 +1,4 @@
+include ':update-ui'
+include ':app'
+
+rootProject.name = "teanity-update"
